@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>sidebar</title>
+    <link rel="stylesheet" href="bs.min.css">
+    <link rel="stylesheet" href="Collapsable_Design.css">
+   
+</head>
+
+<body>
+    <div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+    <img src="BEL_LOGO.png" style="width: 36px;height: 32px;" alt="SNMP Icon" class="header-icon">
+    <h3  class="header-title">SNMP</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            
+            <li>
+                <a href="Monitor_Page.html">Monitor </a>
+            </li>
+            <li>
+                <a href="Control_Page.html">Control </a>
+            </li>
+            <li>
+                <a href="Get_Set_Page.html">Snmp Get & Set </a>
+            </li>
+
+        </ul>
+    </nav>
+
+
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+               
+            </div>
+        </nav>
+
+        <!-- Page Content Holder Start-->
+        <div id="app">
+        <!-- Page Content Holder Start-->
+       
+<!-- first -->
+
+<div class="container" style="margin-bottom:0px;">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card shadow mb-3" style="height: 450px;">
+                <div class="card-header py-3">
+                    <p class="text-primary m-0 fw-bold">Snmp Get</p>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col"><label class="col-form-label" style="margin-top: 5px;margin-left: 20px;"><strong>Community :</strong></label></div>
+                        <div class="col"><input type="text" style="margin-top: 7px;" id="community" name="community" ></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><label class="col-form-label" style="margin-top: 5px;margin-left: 24px;"><strong>IP Address :</strong></label></div>
+                        <div class="col"><input type="text" style="margin-top: 7px;"  id="ipAddress" name="ipAddress"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><label class="col-form-label" style="margin-top: 5px;margin-left: 75px;"><strong>OID :</strong></label></div>
+                        <div class="col"><textarea style="margin-top: 7px;height: 90px;" id="oids" name="oids"></textarea></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><label class="col-form-label" style="margin-top: 5px;"><strong>Received Data :</strong></label></div>
+                        <div class="col"><textarea style="margin-top: 7px;height: 90px;" id="result"></textarea></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col"><button class="btn btn-primary" type="button" style="width: 74px;border-top-left-radius: 17.6px;border-top-right-radius: 17.6px;border-bottom-right-radius: 17.6px;border-bottom-left-radius: 17.6px;margin-left: 126px;margin-top: 5px;" onclick="send_data()">Get</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card shadow mb-3" style="height: 450px;">
+                <div class="card-header py-3">
+                    <p class="text-primary m-0 fw-bold">Snmp Set</p>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col"><label class="col-form-label" style="margin-top: 5px;"><strong>Community :</strong></label></div>
+                        <div class="col"><input type="text" style="margin-top: 7px;" id="set_community"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><label class="col-form-label" style="margin-top: 5px;margin-left: 4px;"><strong>IP Address :</strong></label></div>
+                        <div class="col"><input type="text" style="margin-top: 7px;" id="set_ipAddress"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><label class="col-form-label" style="margin-top: 5px;margin-left: 54px;"><strong>OID :</strong></label></div>
+                        <div class="col"><textarea style="margin-top: 7px;height: 90px;" id="set_oid"></textarea></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><label class="col-form-label" style="margin-top: 5px;margin-left: 40px;"><strong>Value :</strong></label></div>
+                        <div class="col"><textarea style="margin-top: 7px;height: 90px;" id="set_value"></textarea></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col"><button class="btn btn-primary" type="button" style="width: 74px;border-top-left-radius: 17.6px;border-top-right-radius: 17.6px;border-bottom-right-radius: 17.6px;border-bottom-left-radius: 17.6px;margin-left: 126px;margin-top: 5px;" onclick="send_set_data()">Set</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-- first -->
+
+        <!-- second -->
+     
+        <!-- second -->
+
+        
+        <!-- Page Content Holder End -->
+        </div>
+        <!-- Page Content Holder End -->
+
+        <footer id="footerpad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-8 mx-auto">
+                        <p class="copyright text-muted text-center">Bharat Electronics Limited. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+  
+<script defer src="bs.min.js"></script>
+<script defer src="Get_Set_Page_Script.js"></script>
+<script defer src="Collapsable_Script.js"></script>
+</body>
+
+</html>

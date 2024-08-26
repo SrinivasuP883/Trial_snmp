@@ -1,0 +1,43 @@
+/* General Styles for the Select Container */
+.select-container {
+    position: relative;
+    display: inline-block;
+    width: 200px; /* Adjust width as needed */
+}
+
+.select-container select {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Add padding to accommodate arrow */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    appearance: none; /* Remove default styling */
+    cursor: pointer;
+    z-index: 1; /* Ensure it sits on top of the arrow */
+}
+
+/* Style the Custom Arrow */
+.select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Space from the right edge */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #333; /* Arrow color */
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent interaction with the arrow */
+}
+
+/* Optional: Hover and Focus States */
+.select-container select:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Optional: Add a background color change on hover */
+.select-container select:hover {
+    background-color: #f1f1f1;
+}
